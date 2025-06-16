@@ -36,7 +36,7 @@ Get-Content id_rsa.pub | Set-Clipboard
 
 # Step 2. Add SSH KEY to GPU Provider Site
 ### [Vast.ai:](https://cloud.vast.ai/) 
-* 1- Register in [Vast.ai](https://cloud.vast.ai/)
+* 1- Register in [Vast.ai]([https://cloud.vast.ai/](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=Ubuntu%2022.04%20VM))
 * 2- Create an SSH key session by going to `three-lines > Keys > SSH Keys` [here](https://cloud.vast.ai/manage-keys/)
 * 3- Paste Public SSH key created in your local pc in previous steps.
 
@@ -51,8 +51,8 @@ Get-Content id_rsa.pub | Set-Clipboard
 * Hyperbolic: Less GPU availability, No VM template, Cheap GPUs
 
 ### [Vast.ai:](https://cloud.vast.ai/)
-* 1- Select Pytorch(Vast) template [here](https://cloud.vast.ai/)
-* 2- Choose a supported GPU (I recommend =32GB GPU vRAM)
+* 1- Select Ubuntu(Vast) template [here]([https://cloud.vast.ai](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=Ubuntu%2022.04%20VM)/)
+* 2- Choose a supported GPU (I recommend =24GB GPU vRAM)
 * 3- Increase `Disk Space` slidebar to `100GB`
 * 4- Top-up credits with crypto and rent it.
 * 5- Go to [instances](https://cloud.vast.ai/instances/), refresh the page, click on `key` button.
