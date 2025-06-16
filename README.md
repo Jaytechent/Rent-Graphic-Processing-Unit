@@ -25,7 +25,7 @@ Enter same passphrase again:
 
 ### 3- Navigate to `.ssh` directory
 ```
-cd $env:USERPROFILE\.ssh
+ cat ~/.ssh/id_rsa.pub
 ```
 
 ### 4- Copy the `id_rsa.pub` file content in clipboard
