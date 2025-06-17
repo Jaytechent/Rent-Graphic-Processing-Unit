@@ -35,22 +35,18 @@ Get-Content id_rsa.pub | Set-Clipboard
 * Your public key is now copied into your `clipboard`
 
 # Step 2. Add SSH KEY to GPU Provider Site
-### [Vast.ai:](https://cloud.vast.ai/) 
+### [Vast.ai:]([https://cloud.vast.ai](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=Ubuntu%2022.04%20VM)/) 
 * 1- Register in [Vast.ai]([https://cloud.vast.ai/](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=Ubuntu%2022.04%20VM))
 * 2- Create an SSH key session by going to `three-lines > Keys > SSH Keys` [here](https://cloud.vast.ai/manage-keys/)
 * 3- Paste Public SSH key created in your local pc in previous steps.
 
-### [Hyperbolic:](https://app.hyperbolic.xyz/)
-* Register In [Hyperbolic Dashboard](https://app.hyperbolic.xyz/)
-* then, Visit **Settings**
-* Create a new Public SSH key and paste your pubkey into it and save it!
 
 # Step 3. Rent a GPU & Get your GPU's SSH Command
-* Vast and Hyperbolic supports  **crypto payments**
-* Vast: More GPU avalilability, Supporting VM template (non-dockerized), Cheap GPUs
-* Hyperbolic: Less GPU availability, No VM template, Cheap GPUs
+* Vast  supports  **crypto payments** and cheaper than others
+* Vast has  More GPU avalilability, Supporting VM template which is needed for this Prover Node
+s
 
-### [Vast.ai:](https://cloud.vast.ai/)
+### [Vast.ai:]([https://cloud.vast.ai](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=Ubuntu%2022.04%20VM)/)
 * 1- Select Ubuntu(Vast) template [here]([https://cloud.vast.ai](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=Ubuntu%2022.04%20VM)/)
 * 2- Choose a supported GPU (I recommend =24GB GPU vRAM)
 * 3- Increase `Disk Space` slidebar to `100GB`
@@ -59,20 +55,13 @@ Get-Content id_rsa.pub | Set-Clipboard
 * 6- If you don't see a ssh command in `Direct ssh connect:` section, then you have to press on Add SSH Key.
 * 7- Copy SSH Command, and Replace `-L 3000:localhost:3000` in front of the command.
 
-### [Hyperbolic:](https://app.hyperbolic.xyz)
-* 1- Choose a GPU (.eg RTX 4090) [here](https://app.hyperbolic.xyz) by going to `Home > GPU List ` and click on `Rent`
-* 2- Make sure you select `1` as `GPU Count`.
-* 3- Select `pytorch` as `Template`.
-* 4- Rent it.
-* 5- By clicking on your gpu instance, if gives you a SSH command to connect to your GPU terminal.
-* 5- Add this flag: `-L 3000:localhost:3000` in front of your Hyperbolic's SSH command, this will allow you to access to port 3000 on your local system.
 
 # Step 4. Connect to GPU server using SSH Command
 * You must get a command like this. For example, it's hyperbolic's SSH Command:
 ```
 ssh ubuntu@xxxxxx.hyperbolic.xyz -p 123456
 ```
-* You can add this flag: `-L 3000:localhost:8080` in front of you command to get access to apps running on port 8080 from your local pc.
+* You can add this flag: `-L 8080:localhost:8080` in front of you command to get access to apps running on port 8080 from your local pc.
 * Paste and Enter the command you copied in `Ubuntu Terminal` to access your server.
 * Enter the password you set for SSH public key (if you set before) and press enter to open your GPU terminal
 * Add this flag: `-i $env:USERPROFILE\.ssh\id_rsa` in front of your command, to specify the ssh privatekey file.
